@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <script src="js/angular.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="js/angular-cookies.js"></script>
+    <script src="js/ngStorage.js"></script>
+    <script src="js/scripts.js"></script>
+  </head>
+  <body ng-app="myModule">
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">API Examples</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a ui-sref="home" ui-sref-active="activeState">Home</a></li>
+            <li><a ui-sref="usersParent.users" ui-sref-active="activeState">Users</a></li>
+            <li><a ui-sref="weatherData" ui-sref-active="activeState">Weather</a></li>
+            <li><a ui-sref="watchMethod" ui-sref-active="activeState">$scope.watch()</a></li>
+            <li><a ui-sref="cookie" ui-sref-active="activeState">Cookie</a></li>
+            <li><a ui-sref="forms" ui-sref-active="activeState">Forms</a></li>
+            <li><a ui-sref="shopping-list" ui-sref-active="activeState">Shopping List</a></li>
+            <li><a ui-sref="localstorage" ui-sref-active="activeState">Localstorage</a></li>
+            <li><a ui-sref="abbreviations" ui-sref-active="activeState">Abbreviations</a></li> 
+            <li><a ui-sref="currency-converter" ui-sref-active="activeState">Currency Converter</a></li>
+          </ul>
+        </div>
+      </nav>
+      <section class="mb10">
+        <div class="container pr">
+          <ui-view></ui-view>
+        </div>
+      </section>
+  </body>
+  <script>
+    !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","debug","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="4.0.0";
+    analytics.load("wNwbyfxWY1YTUWA0ASexW7s1Xn6Cz2ku");
+    analytics.page();
+  }}();
+ 
+  </script>
+</html>

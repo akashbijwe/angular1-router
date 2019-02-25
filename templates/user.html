@@ -1,0 +1,36 @@
+<div class="col-md-4 col-lg-4">
+    <div class="panel panel-default">
+            <div class="panel-heading">
+            <b>
+                User Id: {{user.id}}
+            </b>
+            </div>
+            <div class="panel-body">
+            <b>Name:</b> {{user.name}} <br>
+            <b>UserName:</b> {{user.username}} <br>
+            <b>Email: </b> {{user.email}}<br>
+            <b>Phone: </b> {{user.phone}}<br>
+            <b>Website: </b> {{user.website}}<br>
+            <b>Company: </b>
+                    <div class="pl10">
+                        <div><b>Name:</b> {{user.company.name}}</div>
+                        <div><b>catchPhrase:</b> {{user.company.catchPhrase}}</div>
+                        <div><b>bs:</b> {{user.company.bs}}</div>
+                    </div>
+            <b>Address: </b>
+                    <div class="pl10">
+                    <div><b>Street: </b>{{user.address.street}}</div>
+                    <div><b>Suite: </b>{{user.address.suite}}</div>
+                    <div><b>City: </b>{{user.address.city}}</div>
+                    <div><b>Zipcode: </b>{{user.address.zipcode}}</div>
+                    <div><b>Geo: </b>
+                        <div class="pl10">
+                        <div><b>Latitude: </b>{{user.address.geo.lat}}</div>
+                        <div><b>longitude: </b>{{user.address.geo.lng}}</div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <a ui-sref="usersParent.users">Back</a>

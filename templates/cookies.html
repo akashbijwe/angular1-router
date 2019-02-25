@@ -1,0 +1,16 @@
+<fieldset class="ng-scope">
+  <legend>Get/Set Cookie</legend>
+    <div class="row mb10">
+        <div class="col-md-6 col-lg-6">
+        <div class="input-group input-group-lg">
+            <input type="text" ng-model="cookie" class="form-control ng-pristine ng-valid ng-empty ng-touched" placeholder="Enter Cookie Name">
+            <div class="input-group-btn">
+                <button class="btn btn-primary" type="button" ng-click="saveCookies(cookie)">Save Cookie</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        Previously save CookiE Value: {{getCookies}}
+    </div>
+</fieldset>

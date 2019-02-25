@@ -1,0 +1,50 @@
+<fieldset>
+  <legend>Get Weather Data</legend>
+  <div class="row mb10">
+    <div class="col-md-6 col-lg-6">
+      <div class="input-group input-group-lg">
+          <input type="text" class="form-control" placeholder="Search" ng-model="searchCity">
+          <div class="input-group-btn">
+            <button class="btn btn-primary" type="submit"  ng-click="getWeatherdata(searchCity)">Search</button>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div ng-hide="Loader" class="mb10">
+    <div class="row">
+      <div class="col-md-6 col-lg-6 tc">
+        <hr>
+        <div class="spinner"></div>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-danger" ng-hide="errorBlock">
+    <strong>City</strong> Not Available or You've mispelled the <strong>City</strong> name.
+  </div>
+  <div class="row" ng-hide="showHideDetails">
+    <hr>
+    <div class="col-md-6 col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <b>
+            City: {{weatherdata.name}}
+          </b>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-6 col-lg-6">
+              <b>Counrty Code: </b> {{weatherdata.sys.country}}<br>
+              <b>Humidity: </b> {{weatherdata.main.humidity}}<br>
+              <b>Pressure: </b> {{weatherdata.main.pressure}}<br>
+              <b>Wind Speed: </b> {{weatherdata.wind.speed}}<br>
+            </div>
+            <div class="col-md-6 col-lg-6">
+              <b>Wind Degree: </b> {{weatherdata.wind.deg}}<br>
+              <b>Latitude: </b> {{weatherdata.coord.lat}}<br>
+              <b>Longitude: </b> {{weatherdata.coord.lon}}<br>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+</fieldset>

@@ -1,0 +1,19 @@
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">My Shopping List</div>
+    <div class="panel-body">
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="item in items">
+          {{item}}
+          <button class="badge" ng-click="removeItem($index)">x</button>
+        </li>
+      </ul>
+      <div class="input-group input-group-md">
+        <input type="text" class="form-control" placeholder="Add Shopping List here.." ng-model="newItem">
+        <div class="input-group-btn">
+          <button class="btn btn-primary" type="button" ng-click="addItem()">ADD</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

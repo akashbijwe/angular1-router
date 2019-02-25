@@ -1,0 +1,33 @@
+<fieldset>
+    <legend>
+        Currency Converter
+    </legend>
+    <div class="row">
+        <div class="col-md-3 col-lg-3">
+            <label>Select Currency: From</label>
+            <div class="form-group">
+                <select ng-model="selectedCurrencyFrom" ng-options="currency.id for currency in currencies" class="form-control"></select>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <label>Enter Number</label>
+            <input type="text" class="form-control" ng-model="number" placeholder="enter number" />
+        </div>
+        
+        <div class="col-md-3 col-lg-3">
+            <label>Select Currency: To</label>
+            <div class="form-group">
+                <select ng-model="selectedCurrencyTo" ng-options="currency.id for currency in currencies" class="form-control"></select>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <label for="">&nbsp;</label>
+            <input type="button" class="btn btn-primary btn-block" value="Convert" ng-click="convertCurrency()" />        </div>
+    </div>
+
+    <div class="row">
+        <hr>
+
+    </div>
+
+</fieldset>

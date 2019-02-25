@@ -1,0 +1,29 @@
+<div class="container">
+    <fieldset>
+        <legend>Form Validation</legend>
+        <div class="row">
+            <div class="col-md-4 col-lg-4">
+                <form name="rForm" ng-submit="submitForm()">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Name" ng-model="user.name">
+                        <span ng-show="rForm.name.$dirty && rForm.name.$error.required">*</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Email" ng-model="user.email" required>
+                        <span ng-show="rForm.email.$dirty && rForm.email.$error.required">*</span>
+                        <span ng-show="rForm.email.$error.email">Not an email</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" placeholder="Password" ng-model="user.password" ng-minlength="5" ng-maxlength="10" required>
+                        <span ng-show="rForm.password.$dirty && rForm.password.$error.required ">*</span>
+                        <span ng-show="rForm.password.$dirty && rForm.password.$error.minlength">Password should be minimum 5 charactors</span>
+                        <span ng-show="rForm.password.$dirty && rForm.password.$error.maxlength">Password max allowed lenght is 10.</span>
+                    </div>
+                    <div class="form-group tr">
+                        <input type="submit" class="btn btn-primary" value="SUBMIT" ng-disabled="rForm.$invalid">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </fieldset>
+</div>

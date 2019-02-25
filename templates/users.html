@@ -1,0 +1,51 @@
+<div ng-hide="Loader">
+  <div class="row">
+    <div class="col-md-12 col-lg-12 tc">
+      <div class="spinner"></div>
+    </div>
+  </div>
+</div>
+<div class="row mb10">
+    <div class="col-md-12 col-lg-12">
+      <input type="text" placeholder="Search" ng-model="userSearch" class="form-control">
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-3 col-lg-3" ng-repeat="user in users | filter: userSearch">
+    <a ui-sref="usersParent.userDetail({id: user.id})">
+      <div class="panel panel-default">
+          <div class="panel-heading">
+          <b>
+              User Id: {{user.id}}
+          </b>
+          </div>
+          <div class="panel-body">
+          <b>Name:</b> {{user.name}} <br>
+          <b>UserName:</b> {{user.username}} <br>
+          <b>Email: </b> {{user.email}}<br>
+          <b>Phone: </b> {{user.phone}}<br>
+          <b>Website: </b> {{user.website}}<br>
+          <b>Company: </b>
+                  <div class="pl10">
+                      <div><b>Name:</b> {{user.company.name}}</div>
+                      <div><b>catchPhrase:</b> {{user.company.catchPhrase}}</div>
+                      <div><b>bs:</b> {{user.company.bs}}</div>
+                  </div>
+          <b>Address: </b>
+                  <div class="pl10">
+                  <div><b>Street: </b>{{user.address.street}}</div>
+                  <div><b>Suite: </b>{{user.address.suite}}</div>
+                  <div><b>City: </b>{{user.address.city}}</div>
+                  <div><b>Zipcode: </b>{{user.address.zipcode}}</div>
+                  <div><b>Geo: </b>
+                      <div class="pl10">
+                      <div><b>Latitude: </b>{{user.address.geo.lat}}</div>
+                      <div><b>longitude: </b>{{user.address.geo.lng}}</div>
+                      </div>
+                  </div>
+                  </div>
+          </div>
+      </div>
+    </a>
+  </div>
+</div>

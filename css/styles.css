@@ -1,0 +1,52 @@
+.white-panel {
+    position: absolute;
+}
+.white-panel h1 {
+    font-size: 14px;
+}
+.pr{
+    position: relative;
+}
+a, a:hover, a:focus{
+    text-decoration: none;
+    color: #333;
+}
+.pr10{padding-right: 10px;}
+.pl10{padding-left: 10px;}
+
+.mt10{margin-top: 10px;}
+.mb10{margin-bottom: 10px;}
+
+.tc{text-align: center}
+.tr{text-align: right}
+
+.activeState{
+    color: #fff !important;
+}
+.spinner {
+  margin: 50px;
+  height: 28px;
+  width: 28px;
+  animation: rotate 0.8s infinite linear;
+  border: 3px solid #3498db;
+  border-right-color: transparent;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+
+/* Form styling */
+input.ng-invalid.ng-dirty{
+    border: 1px solid #A94442;
+}
+form span{
+    color: #A94442;
+    padding-top: 5px;
+    display: block;
+    font-size: 12px;
+}

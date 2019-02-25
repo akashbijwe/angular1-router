@@ -1,0 +1,38 @@
+<div class="container">
+  <fieldset>
+      <legend>Abbreaviation</legend>
+      <div class="row mb10">
+        <div class="col-md-6 col-lg-6">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control ng-pristine ng-untouched ng-valid ng-empty" placeholder="Search" ng-model="abbreaviationSearch" ng-keypress="hideResults()">
+            <div class="input-group-btn">
+              <button class="btn btn-primary" type="submit" ng-click="getAbbreaviation(abbreaviationSearch)">Search</button>
+            </div>
+          </div>
+        </div>
+      </div>  
+       <div ng-hide="Loader" class="mb10">
+        <div class="row">
+          <div class="col-md-6 col-lg-6 tc">
+            <div class="spinner"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row" ng-hide="showHideDetails">
+        <hr>
+        <div class="col-md-3 col-lg-3" ng-repeat="result in results">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <b>
+                  Query: {{abbreaviationSearch}}
+              </b>
+            </div>
+            <div class="panel-body">  
+              <b>Fullform:</b> {{result.fullform}}<br>
+              <b>Meaning:</b> {{result.meaning}}<br>
+            </div>
+          </div>
+        </div>
+      </div>
+  </fieldset>
+</div>
